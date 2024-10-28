@@ -23,6 +23,7 @@ module Nagare
 
     def self.inherited(base)
       base.instance_variable_set(:@attributes, @attributes.dup) if @attributes
+      base.instance_variable_set(:@options, @options.dup) if @options
 
       super
     end
